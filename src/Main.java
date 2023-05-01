@@ -11,8 +11,14 @@ public class Main {
         System.out.print("Enter the value of velocity: ");
         double velocity = scanner.nextDouble();
 
-        KineticEnergy ke = new KineticEnergy(mass, velocity);
-        System.out.println(ke.calcKe());
+        System.out.print("Enter the value of height: ");
+        double height = scanner.nextDouble();
+
+//        KineticEnergy ke = new KineticEnergy(mass, velocity);
+//        System.out.println(ke.calcKe());
+
+        PotentialEnergy pe = new PotentialEnergy(mass, velocity, height);
+        System.out.println(pe.calcPE());
 
     }
 }
