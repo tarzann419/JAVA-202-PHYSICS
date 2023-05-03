@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Physics {
     //lets define the common variables needed
     protected double mass;
-    protected double velocity = 10.00;
+    protected double velocity;
 
     //lets create a constructor
     public Physics(double mass, double velocity){
