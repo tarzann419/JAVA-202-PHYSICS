@@ -4,12 +4,41 @@ public class Physics {
     //lets define the common variables needed
     protected double mass;
     protected double velocity;
+    protected double density;
+    protected double volume;
+
+
+    //lets create a constructor for the upthrust method
+    public Physics(double density, double volume) {
+        this.density = density;
+        this.volume = volume;
+    }
+
 
     //lets create a constructor
-    public Physics(double mass, double velocity){
+    public Physics(double mass, double velocity, double density, double volume){
         this.mass = mass;
         this.velocity = velocity;
+        this.density = density;
+        this.volume = volume;
     }
+
+    public double getDensity() {
+        return density;
+    }
+
+    public void setDensity(double density) {
+        this.density = density;
+    }
+
+    public double getVolume() {
+        return volume;
+    }
+
+    public void setVolume(double volume) {
+        this.volume = volume;
+    }
+
 
     //a get function for mass after we made it protected
     public double getMass(){

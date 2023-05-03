@@ -29,15 +29,15 @@ public class Main {
         switch (choice) {
             case 1:
                 KineticEnergy ke = new KineticEnergy(mass, velocity);
-                System.out.println("The value of the kinetic energy is: " + ke.calcKe());
+                System.out.println("The value of the kinetic energy is: ".toUpperCase() + ke.calcKe() + "J");
                 break;
             case 2:
                 PotentialEnergy pe = new PotentialEnergy(mass, velocity, height);
-                System.out.println("The value of the potential energy is: " + pe.calcPE());
+                System.out.println("The value of the potential energy is: ".toUpperCase() + pe.calcPE() + "J");
                 break;
             case 3:
                 Upthrust upthrust = new Upthrust(density, volume);
-                System.out.println("The value of the Upthrust is: " + upthrust.calculateUpthrust());
+                System.out.println("The value of the Upthrust is: ".toUpperCase() + upthrust.calcUpthrust() + "g/cm3");
                 break;
             default:
                 System.out.println("Invalid choice!");

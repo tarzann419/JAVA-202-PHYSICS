@@ -6,7 +6,6 @@ public class PotentialEnergy extends Physics {
     public PotentialEnergy(double mass, double velocity, double height) {
         super(mass, velocity);
         this.height = height;
-        this.gravity = gravity;
     }
 
     //since its protected, we have to get it using the getter and setter
