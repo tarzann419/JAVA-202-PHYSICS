@@ -2,9 +2,11 @@ public class PotentialEnergy extends Physics {
     // dont forget that you always have to call the constructor from the superclass
 
     protected double height;
+    protected double gravity = 10;
     public PotentialEnergy(double mass, double velocity, double height) {
         super(mass, velocity);
         this.height = height;
+        this.gravity = gravity;
     }
 
     //since its protected, we have to get it using the getter and setter
@@ -20,7 +22,7 @@ public class PotentialEnergy extends Physics {
     // now we define the main code to calculate the potential energy
 
     public double calcPE(){
-        return mass * velocity * height;
+        return mass * gravity * height;
     }
 
 }
