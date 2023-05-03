@@ -37,7 +37,7 @@ public class Main {
                 break;
             case 3:
                 Upthrust upthrust = new Upthrust(density, volume);
-                System.out.println("The value of the Upthrust is: " + upthrust.calculateUpthrust());
+                System.out.println("The value of the Upthrust is: " + upthrust.calcUpthrust(density, volume));
                 break;
             default:
                 System.out.println("Invalid choice!");
