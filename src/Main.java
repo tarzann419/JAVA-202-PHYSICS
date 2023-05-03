@@ -13,7 +13,6 @@ public class Main {
 
         System.out.print("Enter the value of height: ");
         double height = scanner.nextDouble();
-
         System.out.print("Enter the value of density: ");
         double density = scanner.nextDouble();
 
