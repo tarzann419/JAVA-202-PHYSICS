@@ -11,6 +11,7 @@ public class Physics {
         this.velocity = velocity;
     }
 
+    //a get function for mass after we made it protected
     public double getMass(){
         return mass;
     }
