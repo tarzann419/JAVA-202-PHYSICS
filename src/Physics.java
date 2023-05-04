@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class Physics {
     //lets define the common variables needed
-    protected double mass;
-    protected double velocity;
-    protected double density;
-    protected double volume;
+    private double mass;
+    private double velocity;
+    private double density;
+    private double volume;
 
 
     //lets create a constructor for the upthrust method
@@ -22,6 +22,7 @@ public class Physics {
         this.density = density;
         this.volume = volume;
     }
+
 
     public double getDensity() {
         return density;

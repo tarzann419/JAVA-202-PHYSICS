@@ -5,7 +5,7 @@ public class Upthrust extends Physics {
     }
 
     public double calcUpthrust() {
-        return density * 9.81 * volume;
+        return getDensity() * 9.81 * getVolume();
     }
 
 }
