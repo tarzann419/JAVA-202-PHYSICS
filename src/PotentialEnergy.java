@@ -22,6 +22,13 @@ public class PotentialEnergy extends Physics {
 
     public double calcPE(double mass){
         return mass * gravity * getHeight();
+
+    public double calcPE(double mass){
+        try {
+            return mass * gravity * height;
+        }catch (Exception e){
+            System.out.println("something went wrong");
+        }
     }
 
 }
