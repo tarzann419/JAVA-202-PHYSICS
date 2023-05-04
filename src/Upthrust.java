@@ -6,10 +6,11 @@ public class Upthrust extends Physics {
 
     public double calcUpthrust() {
         try {
-            return density * 9.81 * volume;
+            return getDensity() * 9.81 * getVolume();
         } catch (Exception e){
             System.out.println("something went wrong");
         }
+        return 0;
     }
 
 }

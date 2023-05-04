@@ -47,7 +47,6 @@
 
 
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -57,6 +56,7 @@ public class Main {
         System.out.println("1. Kinetic Energy");
         System.out.println("2. Potential Energy");
         System.out.println("3. Upthrust");
+        System.out.println("4. Momentum");
         int choice = scanner.nextInt();
 
         switch (choice) {

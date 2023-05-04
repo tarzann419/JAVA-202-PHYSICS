@@ -7,7 +7,7 @@ public class Momentum extends Physics {
         super(mass, velocity);
     }
 
-    public double calcMomentum() {
+    public double calcMomentum(double mass, double velocity) {
         return mass * velocity;
     }
 
