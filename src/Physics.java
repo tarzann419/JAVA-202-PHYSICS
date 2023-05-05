@@ -6,6 +6,8 @@ public class Physics {
     private double velocity;
     private double density;
     private double volume;
+    private double magnitude;
+    private double distance;
 
 
     //lets create a constructor for the upthrust method
@@ -13,7 +15,6 @@ public class Physics {
         this.density = density;
         this.volume = volume;
     }
-
 
     //lets create a constructor
     public Physics(double mass, double velocity, double density, double volume){
@@ -59,4 +60,21 @@ public class Physics {
     public void setVelocity(double velocity){
         this.velocity = velocity;
     }
+
+    public double getMagnitude() {
+        return magnitude;
+    }
+
+    public void setMagnitude(double magnitude) {
+        this.magnitude = magnitude;
+    }
+
+    public double getDistance() {
+        return distance;
+    }
+
+    public void setDistance(double distance) {
+        this.distance = distance;
+    }
 }
+

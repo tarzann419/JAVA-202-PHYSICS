@@ -9,6 +9,8 @@ public class Main {
         System.out.println("1. Kinetic Energy");
         System.out.println("2. Potential Energy");
         System.out.println("3. Upthrust");
+        System.out.println("4. Momentum");
+        System.out.println("5. Moment");
         int choice = scanner.nextInt();
 
         switch (choice) {
@@ -41,6 +43,26 @@ public class Main {
 
                 Upthrust upthrust = new Upthrust(density, volume);
                 System.out.println("The value of the Upthrust is: ".toUpperCase() + upthrust.calcUpthrust() + "g/cm3");
+                break;
+            case 4:
+                System.out.print("Enter the value of mass: ");
+                double mass2 = scanner.nextDouble();
+
+                System.out.print("Enter the value of velocity: ");
+                double velocity2 = scanner.nextDouble();
+
+                Momentum momentum = new Momentum(mass2, velocity2);
+                System.out.println("The value of the Momentum is: ".toUpperCase() + momentum.calcMomentum(mass2, velocity2) + "g/cm3");
+                break;
+            case 5:
+                System.out.print("Enter the value of magnitude: ");
+                double magnitude = scanner.nextDouble();
+
+                System.out.print("Enter the value of distance: ");
+                double distance = scanner.nextDouble();
+
+                Moment moment = new Moment(magnitude, distance);
+                System.out.println("The value of the Moment is: ".toUpperCase() + moment.calcMoment(magnitude, distance) + "g/cm3");
                 break;
             default:
                 System.out.println("Invalid choice!");
