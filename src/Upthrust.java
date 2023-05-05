@@ -1,14 +1,16 @@
 public class Upthrust extends Physics {
 
-    double density;
-    double volume;
-    public Upthrust(double mass, double velocity) {
-        super(mass, velocity);
-        this.density = density;
-        this.volume = volume;
+    public Upthrust(double density, double volume) {
+        super(density, volume);
     }
 
-    public static double calcUpthrust(double density, double volume){
-        return density * 9.81 * volume;
+    public double calcUpthrust() {
+        try {
+            return getDensity() * 9.81 * getVolume();
+        } catch (Exception e){
+            System.out.println("something went wrong");
+        }
+        return 0;
     }
+
 }

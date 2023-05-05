@@ -7,6 +7,6 @@ public class KineticEnergy extends Physics {
     }
 
     public double calcKe(){
-        return 0.5*mass*velocity*velocity;
+        return 0.5*getMass()*getVelocity()*getVelocity();
     }
 }
