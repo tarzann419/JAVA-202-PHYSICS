@@ -69,6 +69,7 @@ public class EnergyCalculatorGUI extends JFrame implements ActionListener {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack();
         setVisible(true);
+        setResizable(true);
 
     }
     public void actionPerformed(ActionEvent e){
