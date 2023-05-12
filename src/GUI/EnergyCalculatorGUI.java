@@ -83,7 +83,6 @@ public class EnergyCalculatorGUI extends JFrame implements ActionListener {
             KineticEnergy ke  =new KineticEnergy (mass, velocity);
             resultLabel.setText(String.format("The value of kinetic energy is %f", ke.calcKe()));
 
-//            Color backgroundColor =  new Color(11,61,100);
 
         }
     }
