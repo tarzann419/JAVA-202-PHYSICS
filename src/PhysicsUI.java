@@ -68,7 +68,7 @@ public class PhysicsUI extends JFrame {
         PotentialEnergy pe = new PotentialEnergy(mass, height);
         double potentialEnergy = pe.calcPE(mass);
 
-        resultLabel.setText("Your answer is: " + potentialEnergy);
+        resultLabel.setText("Your answer is: " + potentialEnergy + "J");
     }
 
 
