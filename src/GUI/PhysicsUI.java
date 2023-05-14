@@ -155,6 +155,15 @@ public class PhysicsUI extends JFrame {
         dialog.add(new JLabel("Velocity"));
         heightField = new JTextField();
         dialog.add(heightField);
+
+        JButton calcualteButton  = new JButton("Calculate");
+        calcualteButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+//                calculateMomentum();
+            }
+        });
+
     }
 
 
