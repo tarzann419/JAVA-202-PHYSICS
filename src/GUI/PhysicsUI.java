@@ -17,7 +17,7 @@ public class PhysicsUI extends JFrame {
 
         JPanel mainPanel1 = new JPanel(new GridLayout(3, 1));
 
-        JButton potentialEnergyButton = new JButton("Potential Energy");
+        JButton potentialEnergyButton = new JButton("1.Potential Energy");
         potentialEnergyButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -29,7 +29,7 @@ public class PhysicsUI extends JFrame {
 
         add(mainPanel1);
 
-        JButton kineticEnergyButton = new JButton("Kinetic Energy");
+        JButton kineticEnergyButton = new JButton("2.Kinetic Energy");
         kineticEnergyButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
