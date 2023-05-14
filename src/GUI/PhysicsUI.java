@@ -16,6 +16,8 @@ public class PhysicsUI extends JFrame {
         setLocationRelativeTo(null);
 
         JPanel mainPanel1 = new JPanel(new GridLayout(3, 1));
+        mainPanel1.setBackground(Color.darkGray);
+
 
         JButton potentialEnergyButton = new JButton("1.Potential Energy");
         potentialEnergyButton.addActionListener(new ActionListener() {
@@ -38,6 +40,8 @@ public class PhysicsUI extends JFrame {
         });
         mainPanel1.add(kineticEnergyButton);
 
+//        JButton momentumB
+
     }
 
 
@@ -46,6 +50,7 @@ public class PhysicsUI extends JFrame {
         JDialog dialog = new JDialog(this, "Potential Energy", true);
         dialog.setLayout(new GridLayout(3, 2));
         dialog.setSize(300, 150);
+        dialog.getContentPane().setBackground(Color.darkGray);
         dialog.setLocationRelativeTo(this);
 
         dialog.add(new JLabel("Mass:"));
@@ -86,6 +91,7 @@ public class PhysicsUI extends JFrame {
         JDialog dialog = new JDialog(this,"Kinetic Energy",true);
         dialog.setLayout(new GridLayout(3,2));
         dialog.setSize(300,150);
+        dialog.getContentPane().setBackground(Color.darkGray);
         dialog.setLocationRelativeTo(this);
 
 
