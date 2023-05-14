@@ -12,7 +12,7 @@ public class PhysicsUI extends JFrame {
     public PhysicsUI() {
         setTitle("Physics Calculator");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(400, 200);
+        setSize(400, 250);
         setLocationRelativeTo(null);
 
         JPanel mainPanel1 = new JPanel(new GridLayout(3, 1));
@@ -40,7 +40,14 @@ public class PhysicsUI extends JFrame {
         });
         mainPanel1.add(kineticEnergyButton);
 
-//        JButton momentumB
+        JButton momentumButton = new JButton("3.Momentum");
+        momentumButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                showMomentumDialog();
+            }
+        });
+        mainPanel1.add(momentumButton);
 
     }
 
@@ -131,6 +138,25 @@ public class PhysicsUI extends JFrame {
 
         resultLabel.setText("THE ANSWER IS :" + kineticEnergy + "J");
     }
+
+    private void showMomentumDialog(){
+        JDialog dialog = new JDialog(this,"Momentum",true);
+        dialog.setLayout(new GridLayout(3,2));
+        dialog.setSize(300,150);
+        dialog.getContentPane().setBackground(Color.darkGray);
+        dialog.setLocationRelativeTo(this);
+
+
+        dialog.add(new JLabel("Mass"));
+        massField =new JTextField();
+        dialog.add(massField);
+
+
+        dialog.add(new JLabel("Velocity"));
+        heightField = new JTextField();
+        dialog.add(heightField);
+    }
+
 
 
 }
