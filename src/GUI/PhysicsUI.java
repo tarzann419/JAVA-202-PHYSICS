@@ -15,7 +15,7 @@ public class PhysicsUI extends JFrame {
         setSize(400, 250);
         setLocationRelativeTo(null);
 
-        JPanel mainPanel1 = new JPanel(new GridLayout(3, 1));
+        JPanel mainPanel1 = new JPanel(new GridLayout(4, 1));
         mainPanel1.setBackground(Color.darkGray);
 
 
@@ -40,24 +40,34 @@ public class PhysicsUI extends JFrame {
         });
         mainPanel1.add(kineticEnergyButton);
 
-//        JButton momentumButton = new JButton("3.Momentum");
-//        momentumButton.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                showMomentumDialog();
-//            }
-//        });
-//        mainPanel1.add(momentumButton);
+
+        JButton MomentButton = new JButton("3. Moment");
+        MomentButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {insertMomentValues();
+
+            }
+        });
+        mainPanel1.add(MomentButton);
+
+        JButton MomentumButton = new JButton("4. Momentum");
+        MomentumButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {insertMomentumValues();
+
+            }
+        });
+        mainPanel1.add(MomentumButton);
 
     }
 
 
 
-    private void showPotentialEnergyDialog() {
+    public void showPotentialEnergyDialog() {
         JDialog dialog = new JDialog(this, "Potential Energy", true);
         dialog.setLayout(new GridLayout(3, 2));
         dialog.setSize(300, 150);
-        dialog.getContentPane().setBackground(Color.darkGray);
+        dialog.getContentPane().setBackground(Color.lightGray);
         dialog.setLocationRelativeTo(this);
 
         dialog.add(new JLabel("Mass:"));
@@ -90,7 +100,7 @@ public class PhysicsUI extends JFrame {
         PotentialEnergy pe = new PotentialEnergy(mass, height);
         double potentialEnergy = pe.calcPE(mass);
 
-        resultLabel.setText("Your answer is: " + potentialEnergy);
+        resultLabel.setText("Your answer is: " + potentialEnergy + "J");
     }
 
 
@@ -98,7 +108,7 @@ public class PhysicsUI extends JFrame {
         JDialog dialog = new JDialog(this,"Kinetic Energy",true);
         dialog.setLayout(new GridLayout(3,2));
         dialog.setSize(300,150);
-        dialog.getContentPane().setBackground(Color.darkGray);
+        dialog.getContentPane().setBackground(Color.lightGray);
         dialog.setLocationRelativeTo(this);
 
 
@@ -139,31 +149,85 @@ public class PhysicsUI extends JFrame {
         resultLabel.setText("THE ANSWER IS :" + kineticEnergy + "J");
     }
 
-//    private void showMomentumDialog(){
-//        JDialog dialog = new JDialog(this,"Momentum",true);
-//        dialog.setLayout(new GridLayout(3,2));
-//        dialog.setSize(300,150);
-//        dialog.getContentPane().setBackground(Color.darkGray);
-//        dialog.setLocationRelativeTo(this);
-//
-//
-//        dialog.add(new JLabel("Mass"));
-//        massField =new JTextField();
-//        dialog.add(massField);
-//
-//
-//        dialog.add(new JLabel("Velocity"));
-//        heightField = new JTextField();
-//        dialog.add(heightField);
-//
-//        JButton calcualteButton  = new JButton("Calculate");
-//        calcualteButton.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-////                calculateMomentum();
-//            }
-//        });
 
+    public void insertMomentValues(){
+        JDialog dialog =new JDialog(this,"Moment",true);
+            dialog.setLayout(new GridLayout(3,3));
+            dialog.setSize(300,150);
+            dialog.setLocationRelativeTo(this);
+            dialog.getContentPane().setBackground(Color.lightGray);
+
+            dialog.add(new JLabel("Magnitude:"));
+            massField = new JTextField();
+            dialog.add(massField);
+
+        dialog.add(new JLabel("Distance:"));
+        heightField = new JTextField();
+        dialog.add(heightField);
+
+        JButton calculateButton = new JButton("Calculate");
+        calculateButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calculateMoment();
+            }
+        });
+
+        dialog.add(calculateButton);
+        resultLabel = new JLabel("");
+        dialog.add(resultLabel);
+        dialog.setVisible(true);
+    }
+
+
+    private void calculateMoment(){
+        double magnitude = Double.parseDouble(massField.getText());
+        double distance = Double.parseDouble(heightField.getText());
+
+        MomentGUI moment = new MomentGUI(magnitude, distance);
+        double momentValue = moment.calcMoment();
+
+        resultLabel.setText("Your answer is: " + momentValue + "Nm");
+    }
+    public void insertMomentumValues(){
+        JDialog dialog = new JDialog(this, "Momentum", true);
+        dialog.setLayout(new GridLayout(4,4));
+        dialog.setSize(300,150);
+        dialog.setLocationRelativeTo(this);
+        dialog.getContentPane().setBackground(Color.lightGray);
+
+        dialog.add(new JLabel("Mass:"));
+        massField = new JTextField();
+        dialog.add(massField);
+
+        dialog.add(new JLabel("Velocity:"));
+        heightField = new JTextField();
+        dialog.add(heightField);
+
+        JButton calculateButton = new JButton("Calculate");
+        calculateButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calculateMomentum();
+            }
+        });
+
+
+        dialog.add(calculateButton);
+            resultLabel = new JLabel("");
+            dialog.add(resultLabel);
+
+            dialog.setVisible(true);
+}
+        private void calculateMomentum(){
+            double mass = Double.parseDouble(massField.getText());
+            double velocity = Double.parseDouble((heightField.getText()));
+
+             MomentumGUI momentum = new MomentumGUI(mass, velocity);
+             double momentumValue = momentum.calcMomentum();
+
+        resultLabel.setText("Your answer is: " + momentumValue + "Kgm/s/s");
+}
     }
 
 

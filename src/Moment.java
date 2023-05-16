@@ -9,3 +9,8 @@ public class Moment extends Physics{
         return magnitude * distance;
     }
 }
+
+
+
+
+

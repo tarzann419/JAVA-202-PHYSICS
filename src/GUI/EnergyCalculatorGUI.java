@@ -140,15 +140,15 @@
 ////        resultLabel.setText("Your answer is: " + KineticEnergy);
 //
 ////    }
-
-
-
-
-
-
-
-
-
-
-
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
