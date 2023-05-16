@@ -10,7 +10,7 @@ public class MomentGUI {
         this.distance = distance;
     }
 
-    public double getMagnitude() {
+    public double getMagnitude () {
         return magnitude;
     }
 

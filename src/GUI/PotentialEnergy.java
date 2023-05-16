@@ -1,7 +1,7 @@
 package GUI;
 
 public class PotentialEnergy extends PhysicsUI {
-    // dont forget that you always have to call the constructor from the superclass
+    // don't forget that you always have to call the constructor from the superclass
 
     private double height;
     protected double gravity = 10;

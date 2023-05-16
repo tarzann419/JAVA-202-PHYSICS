@@ -151,7 +151,7 @@ public class PhysicsUI extends JFrame {
 
 
     public void insertMomentValues(){
-        JDialog dialog =new JDialog(this,"Moment",true);
+        JDialog dialog =new JDialog (this,"Moment",true);
             dialog.setLayout(new GridLayout(3,3));
             dialog.setSize(300,150);
             dialog.setLocationRelativeTo(this);
@@ -219,7 +219,7 @@ public class PhysicsUI extends JFrame {
 
             dialog.setVisible(true);
 }
-        private void calculateMomentum(){
+        private void calculateMomentum (){
             double mass = Double.parseDouble(massField.getText());
             double velocity = Double.parseDouble((heightField.getText()));
 

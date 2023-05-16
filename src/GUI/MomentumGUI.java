@@ -22,7 +22,7 @@ public void setMass(double mass){
         this.velocity = velocity;
     }
 
-    public double calcMomentum(){
+    public double calcMomentum (){
         return mass * velocity;
     }
 }
